@@ -3,8 +3,8 @@ import { Link } from "expo-router";
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center bg-black ">
-      <Text className="text-orange-300">app/index.tsx</Text>
+    <View className="flex-1 items-center justify-center bg-blue-200 ">
+      <Text className="font-bold my-10 font-rubik text-3xl text-slate-100">Welcome to ReState</Text>
 
       <Link className="text-white" href="/signin">Sign In</Link>
       <Link className="text-green-600" href="/explore">Explore</Link>
