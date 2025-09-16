@@ -14,14 +14,18 @@ module.exports = {
         "rubik-light": ["Rubik-Light", "sans-serif"],
       },
       colors: {
-        "primary": {
-          100: "#191D31",
-          200: "#0061FF",
-          300: "#0061FF1A",
+        "primary":'#030014',
+        "secondary": '#151312',
+        light: {
+          100: '#D6C6FF',
+          200: '#A8B5DB',
+          300: '#9CA4AB',
         },
-        accent: {
-          100: "#FBFBFB",
+        dark: {
+          100: '#221f3d',
+          200: '#0f0d23',
         },
+        accent: '#AB8BFF',
         black: {
           DEFAULT: "#000000",
           100: "#8c8e98",
