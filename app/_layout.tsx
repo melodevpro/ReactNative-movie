@@ -22,5 +22,12 @@ export default function RootLayout() {
   }, [fontsLoaded]);
 
   if(!fontsLoaded) return null;
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return <Stack>
+    <Stack.Screen 
+    name="(tabs)"
+    options={{ headerShown:false }} />
+    <Stack.Screen 
+    name="Pelicula/[id]"
+    options={{ headerShown:false }} />
+  </Stack>;
 }
