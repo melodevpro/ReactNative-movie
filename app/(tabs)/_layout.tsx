@@ -47,6 +47,7 @@ export default function TabsLayout() {
           overflow: "hidden",
           borderWidth: 1,
           borderColor: "#0F0D23",
+          
         },
       }}
     >
