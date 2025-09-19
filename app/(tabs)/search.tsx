@@ -24,19 +24,24 @@ const search = () => {
   }), false)
 
   useEffect(() => {
-    const func = async () => {
+    const timeoutId = setTimeout(async () => {
     if(searchQuery.trim()) {
       await loadMovies();
     } else {
       reset();
     }
-  }
-  func();
+  }, 500);
+  return () => clearTimeout(timeoutId);
   }, [searchQuery]);
 
   return (
     <View className='flex-1 bg-primary'>
-      <Image source={images.bg} className='flex-1 absolute w-full z-0' resizeMode='cover'></Image>
+      <Image 
+      source={images.bg} 
+      className='flex-1 absolute w-full z-0' 
+      resizeMode='cover'>
+      </Image>
+      
       <FlatList 
       data={movies}
       renderItem={({ item }) => <MovieCard {...item} />}
@@ -53,6 +58,7 @@ const search = () => {
       }}
       ListHeaderComponent={
         <>
+
         <View className='w-full flex-row justify-center mt-20 items-center'>
           <Image source={icons.logo} className='w-12 h-12 '>
           </Image>
@@ -82,6 +88,16 @@ const search = () => {
           </Text>
         )}
         </>
+      }
+      ListEmptyComponent={
+        !loading && !error  ? (
+          <View className='mt-10 px-5'>
+            <Text 
+            className='text-center text-gray-500'>{searchQuery.trim() 
+            ? 'No movies fround' : 'Search for a movie'}
+            </Text>
+          </View>
+        ) : null
       }
       />
     </View>
