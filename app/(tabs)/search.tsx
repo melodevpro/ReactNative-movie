@@ -89,6 +89,7 @@ const search = () => {
         )}
         </>
       }
+      
       ListEmptyComponent={
         !loading && !error  ? (
           <View className='mt-10 px-5'>
