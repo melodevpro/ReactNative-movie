@@ -14,7 +14,7 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date} : Movie
             className='w-full h-52 rounded-lg'
             resizeMode='cover'
             />
-                <Text className='text-sm font-bold text-white mt-2 '>
+                <Text className='text-sm font-bold text-white mt-2 numberOfLines-1'>
                     {title}
                 </Text>
 
